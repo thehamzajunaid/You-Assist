@@ -41,6 +41,8 @@
 - **Vector DB**: ChromaDB with automatic embeddings
 - **LLM**: Ollama (gemma3:1b, mistral, or any supported model)
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/0969415054894b939991cfd32553cabd?sid=6721758b-b7e7-4a24-a54a-1483b8b83984" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## 🚀 Quick Start
 
 ### Prerequisites
