@@ -196,4 +196,6 @@ backend/.env
 backend/.env*
 backend/.venv
 backend/.venv*
+.vs/
+backend/.vs
 frontend/you-assist/node_modules
