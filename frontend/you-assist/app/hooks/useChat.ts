@@ -1,7 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 
-export function useChat() {
+interface UseChatProps {
+  useKnowledgeBase: boolean;
+}
+
+export function useChat({ useKnowledgeBase }: UseChatProps) {
   const [messages, setMessages] = useState([
     { role: "assistant", content: "Hello! I'm your AI assistant. How can I help you today?" },
   ]);
@@ -26,16 +30,22 @@ export function useChat() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/api/v1/chat", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER}/api/v1/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage.content, history: messages }),
+        body: JSON.stringify(
+          { 
+            message: userMessage.content, 
+            history: messages,
+            use_knowledge_base: useKnowledgeBase
+          }
+        ),
       });
 
       if (!response.ok) throw new Error("Failed to get response");
       const data = await response.json();
 
-      setMessages((prev) => [...prev, { role: "assistant", content: data.response }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: data.response, sources: data.sources }]);
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
@@ -49,6 +59,10 @@ export function useChat() {
       setLoading(false);
     }
   };
+    
+  const addSystemMessage = (content: string) => {
+    setMessages(prev => [...prev, { role: 'assistant', content }]);
+  };
 
-  return { messages, input, setInput, loading, sendMessage, messagesEndRef };
+  return { messages, input, setInput, loading, sendMessage, messagesEndRef, addSystemMessage };
 }
