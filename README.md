@@ -102,13 +102,14 @@ ollama pull gemma3:1b
 ollama serve
 ```
 
-Ollama runs on `http://localhost:11434`
+The code is using Ollama sdk so no need for explicitly calling the API
 
-### 5. Optional: Environment Variables
+### 5. Environment Variables
 
 ```bash
 # backend/.env (optional)
-GROQ_API_KEY=YOUR-GROQ-API-KEY (Only needed if you are opting for non local inference. Uncomment the GROQ code for chatting in backend/api/v1/chat.py)
+#(If you are opting for non local inference. Uncomment the GROQ code for chatting in backend/api/v1/chat.py)
+GROQ_API_KEY=YOUR-GROQ-API-KEY 
 
 # frontend/you-assist/.env.local
 NEXT_PUBLIC_API_SERVER=http://localhost:8000
@@ -182,4 +183,4 @@ MIT License - Free to use, modify, and distribute
 
 **Built with the mission of democratizing AI through open-source technology** 🚀
 
-*For questions or collaboration: [Your Contact Info]*
+*For questions or collaboration feel free to reach out
