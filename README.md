@@ -41,9 +41,14 @@
 - **Vector DB**: ChromaDB with automatic embeddings
 - **LLM**: Ollama (gemma3:1b, mistral, or any supported model)
 
-```
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/0969415054894b939991cfd32553cabd?sid=6721758b-b7e7-4a24-a54a-1483b8b83984" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-```
+<div>
+    <a href="https://www.loom.com/share/0969415054894b939991cfd32553cabd">
+      <p>You Assist - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/0969415054894b939991cfd32553cabd">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0969415054894b939991cfd32553cabd-625c27fd8c2accfe-full-play.gif">
+    </a>
+</div>
 
 ## 🚀 Quick Start
 
